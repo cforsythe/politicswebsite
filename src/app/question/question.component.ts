@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Question } from '../Question';
+import { QuizresultService } from '../quizresult.service';
 
 @Component({
   selector: 'app-question',
@@ -12,14 +13,19 @@ export class QuestionComponent implements OnInit {
   @Input() question: Question;
   selection: string;
 
-  constructor() { }
+  constructor(public quizresultService: QuizresultService) { }
 
   ngOnInit() {
   }
 
   selectAnswer(choice: string){
     if(!this.selection){
-      console.log(choice);
+      if(choice === this.question.answer){
+        this.quizresultService.gotQuestionCorrect();
+      }
+      else{
+        this.quizresultService.gotQuestionIncorrect();
+      }
       this.selection = choice;
     }
   }
