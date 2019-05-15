@@ -2,5 +2,7 @@
   <app-question [question]=question></app-question>
 </div>
 <div *ngIf="quizComplete()">
-  <h1>Score: {{ getScore()}}%</h1>
+  <span class='score'>Score: {{ getScore()}}%</span>
+  <br>
+  <a routerLink="/learn" class='btn btn-success learn' routerLinkActive>Learn More</a>
 </div>
