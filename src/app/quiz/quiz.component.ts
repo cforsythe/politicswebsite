@@ -50,7 +50,26 @@ export class QuizComponent implements OnInit {
       'question': "THERE ARE HOW MANY BRANCHES OF GOVERNMENT?",
       'choices': ["One", "Two", "Three", "Four"],
       'answer': "Three"
-    }];
+    },
+    {
+      'number': 8,
+      'question': "WHAT IS THE ONLY MINORITY GROUP SPECIFICALLY ADDRESSED IN THE U.S CONSTITUTION?",
+      'choices': ["Asian", "Native American", "Latino", "African American"],
+      'answer': "Native American"
+    },
+    {
+      'number': 9,
+      'question': "WHAT IS THE MAIN PURPOSE OF THE UNITED STATES CONSTITUTION?",
+      'choices': ["To Declate Independence From Great Britain", "To Establish A New Government For The United States and Designate its Power and Limits", "To Lay The Groundwork for Ending Slavery in the United States", "To Provide Citizens With a Written Record of The Constitutional Convention"],
+      'answer': "To Establish A New Government For The United States and Designate its Power and Limits"
+    },
+    {
+      'number': 10,
+      'question': "WHAT DO THE FIRST THREE ARTICLES OF THE CONSTITUTION ACCOMPLISH?",
+      'choices': ["Outline the responsibilities and powers of the executive, legislative, and judicial branches", "Clearly define the fundamental rights of all American citizens", "List the main reasons for separation from Great Britain", "Provide a vague outline of the American government"],
+      'answer': "Outline the responsibilities and powers of the executive, legislative, and judicial branches"
+    }
+  ];
 
   constructor(public quizresultService: QuizresultService) { }
 
