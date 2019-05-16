@@ -1,5 +1,5 @@
- <div>
-  <h1>{{ question.number }}. {{ question.question }} </h1>
+ <div class="card">
+  <h1 class="card-title">{{ question.number }}. {{ question.question }} </h1>
   <li *ngFor="let choice of question.choices" 
     (click)="selectAnswer(choice)" 
     [ngClass]="{'correct': selection === question.answer && choice === question.answer || selection && choice == question.answer, 
